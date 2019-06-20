@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ShoppingCart</string>
+
+    <string name="rmb_X">¥&#160;%1$.2f</string>
+    <string name="cart">购物车(%1$d)</string>
+    <string name="all_select">全选</string>
+    <string name="edit_done">取消编辑</string>
+    <string name="go_settle_X">去结算(%1$d)</string>
+    <string name="go_settle">去结算</string>
+    <string name="delete_X">删除(%1$d)</string>
+    <string name="total_">合计：</string>
+    <string name="edit">编辑</string>
+    <string name="normal_tip_X">购物车中有 %1$d 件商品已经降价，快去看看</string>
+</resources>

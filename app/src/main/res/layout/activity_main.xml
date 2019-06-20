@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:minHeight="?android:attr/actionBarSize">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="14dp"
+            app:srcCompat="@drawable/ic_logo"
+            tools:ignore="VectorDrawableCompat"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/cart"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/edit"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#BDBDBD"/>
+
+    </RelativeLayout>
+
+    <!--如果不使用长按出现选项菜单的功能，这里可以直接使用原生 RecyclerView-->
+    <com.sitechdev.shoppingcart.cartlayout.RecyclerViewWithContextMenu
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="3dp"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/actionBarSize"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp">
+
+        <CheckBox
+            android:id="@+id/checkbox_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_select"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/total_"
+            android:textColor="#222222"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rmb_X"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp"/>
+
+        <Button
+            android:id="@+id/btn_go_to_pay"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/go_settle_X"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</LinearLayout>
